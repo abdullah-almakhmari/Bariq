@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# build outputs
+dist/
+build/
+
+# environment variables
+.env
+.env.*
+.env.txt
+
+# OS files
+.DS_Store
+
+# project specific
+server/public
+*.tar.gz
+attached_assets/

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-ar: 'Cairo', sans-serif;
+  --font-en: 'Outfit', sans-serif;
+  
+  --font-display: var(--font-ar);
+  --font-body: var(--font-ar);
+
+  /* Emerald/Green Eco Theme */
+  --background: 150 20% 98%;
+  --foreground: 160 40% 10%;
+  
+  --primary: 150 60% 40%; /* Emerald 600 */
+  --primary-foreground: 150 20% 98%;
+  
+  --secondary: 150 30% 90%;
+  --secondary-foreground: 150 60% 25%;
+  
+  --muted: 150 20% 94%;
+  --muted-foreground: 155 10% 45%;
+  
+  --accent: 35 90% 55%; /* Warm Orange/Amber for highlights */
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 150 20% 88%;
+  --input: 150 20% 88%;
+  --ring: 150 60% 40%;
+  
+  --radius: 0.75rem;
+}
+
+/* LTR English Overrides */
+[dir="ltr"] {
+  --font-display: var(--font-en);
+  --font-body: var(--font-en);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+/* Leaflet Customization */
+.leaflet-container {
+  font-family: var(--font-body);
+  z-index: 0;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  width: 280px !important;
+}
+
+/* Custom Marker Icons */
+.custom-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.user-location-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
+}
