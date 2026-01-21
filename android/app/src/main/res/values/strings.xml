@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Bariq</string>
+    <string name="title_activity_main">Bariq</string>
+    <string name="package_name">com.abdullah.bariq</string>
+    <string name="custom_url_scheme">com.abdullah.bariq</string>
+</resources>
