@@ -1,0 +1,6 @@
+{
+    "appId": "com.abdullah.bariq",
+    "appName": "Bariq",
+    "webDir": "dist/public",
+    "bundledWebRuntime": false
+}
